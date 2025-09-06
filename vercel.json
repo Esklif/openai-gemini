@@ -1,15 +1,5 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/handler.mjs",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/api/handler.mjs"
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "api/handler" }
   ]
 }
